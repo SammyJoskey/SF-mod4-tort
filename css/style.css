@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 	font-style: normal;
-	margin: 0;
+	margin: 0 auto;
 }
 
 .intro,
@@ -571,8 +571,10 @@ hr {
 /*Шестой этаж*/
 
 .feedback-contacts-container {
+	position: relative;
 	display: flex;
 	align-items: flex-end;
+	flex-wrap: nowrap;
 	padding-top: 92px;
 	padding-bottom: 110px;
 }
@@ -678,6 +680,16 @@ hr {
 	margin-bottom: 17px;
 }
 
+.background {
+	position: absolute;
+	width: 1575px;
+	height: 481px;
+	background-color: rgb(52, 52, 52);
+	z-index: -1;
+	clip-path: polygon(1000px 0, 100% 0, 100% 100%, 1000px 100%);
+}
+
+
 /*Футер*/
 
 footer {
@@ -735,6 +747,12 @@ footer {
 	min-width: 295px;
 	max-width: 100%;
 	margin-right: 1vw;
+	}
+	.feedback-contacts-container {
+	flex-wrap: wrap;
+	padding-left: initial;
+    padding-right: initial;
+	}
 }
 
 @media (max-width: 1230px) {
@@ -879,7 +897,7 @@ footer {
 	width: 100%;
 	}
 }
-	
+
 @media (max-width: 553px) {
 	.footer-container {
 	justify-content: center;
