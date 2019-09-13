@@ -879,6 +879,13 @@ footer {
 	width: 100%;
 	}
 }
+	
+@media (max-width: 553px) {
+	.footer-container {
+	justify-content: center;
+	text-align: center;
+	}
+}
 
 @media (max-width: 523px) {
 	header {
